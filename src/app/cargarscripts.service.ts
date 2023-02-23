@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class CargarscriptsService {
 
-  constructor() {}
-
+  constructor() { }
+  
   carga(archivos:string[]){
     console.log(archivos)
     for(let archivo of archivos){
