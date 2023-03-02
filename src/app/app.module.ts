@@ -18,6 +18,7 @@ import { CanjeaComponent } from './content/canjea/canjea.component';
 import { PromocionesComponent } from './content/promociones/promociones.component';
 import { RestaurantesComponent } from './content/restaurantes/restaurantes.component';
 import { NovedadesComponent } from './content/novedades/novedades.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes=[
   {path:'', component:InicioComponent},
@@ -25,7 +26,8 @@ const appRoutes: Routes=[
   {path: 'Promociones', component: PromocionesComponent},
   {path:'Canjea', component: CanjeaComponent},
   {path:'Restaurantes', component:RestaurantesComponent},
-  {path:'Novedades', component:NovedadesComponent}
+  {path:'Novedades', component:NovedadesComponent},
+  {path:'Login', component:LoginComponent}
 
 ];
 
@@ -42,7 +44,8 @@ const appRoutes: Routes=[
     CanjeaComponent,
     PromocionesComponent,
     RestaurantesComponent,
-    NovedadesComponent
+    NovedadesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
