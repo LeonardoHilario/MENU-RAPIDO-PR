@@ -7,6 +7,7 @@ import { CargarscriptsService } from '../cargarscripts.service';
   styleUrls: ['./header.component.css']
   })
   export class HeaderComponent implements OnInit {
+    
     constructor(private cargarscripts: CargarscriptsService)
      {cargarscripts.carga([
     "assets/vendor/purecounter/purecounter_vanilla.js",
