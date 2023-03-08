@@ -2,33 +2,34 @@
 <br>
 <br>
 <br>
-<nav id="navbar" class="navbar" style="">
+<br>
+<nav id="navbar" class="navbar" style="background-color: black;">
     <ul>
       <li>
-        <a [routerLink]="['Inicio']" style="text-decoration: none;">
-          <i class="bi bi-house" style="font-size: 20px;"></i>
+        <a [routerLink]="['Inicio']" style="text-decoration: none; color: white; border-color: white; border-width: 1px; border-style: solid; padding-right:25px ;">
+          <i class="bi bi-house" style="font-size: 20px; padding-right: 5px;"></i>
           <br> <span>Inicio</span>
         </a>
       </li>
       <li>
-        <a [routerLink]="['Promociones']" style="text-decoration: none;">
-          <i class="bi bi-percent" style="font-size: 20px;"></i>
+        <a [routerLink]="['Promociones']" style="text-decoration: none; color: white; border-color: white; border-width: 1px; border-style: solid; padding-right:25px ;">
+          <i class="bi bi-percent" style="font-size: 20px; padding-right: 5px;"></i>
         <br> <span>Promociones</span>
         </a>
       </li>
       <li>
-        <a [routerLink]="['Canjea']" style="text-decoration: none;">
-          <i class="bi bi-ticket"style="font-size:20px;"></i>
+        <a [routerLink]="['Canjea']" style="text-decoration: none; color: white; border-color: white; border-width: 1px; border-style: solid; padding-right:25px ;">
+          <i class="bi bi-ticket"style="font-size:20px; padding-right: 5px;"></i>
           <br> <span>Canjea</span>
         </a>
       </li>
       <li>
-        <a [routerLink]="['Novedades']"style="text-decoration: none;">
-          <i class="bi bi-newspaper" style="font-size: 20px;"></i>
+        <a [routerLink]="['Novedades']"style="text-decoration: none; color: white; border-color: white; border-width: 1px; border-style: solid; padding-right:25px ;">
+          <i class="bi bi-newspaper" style="font-size: 20px; padding-right: 5px;"></i>
           <br> <span>Novedades</span>
         </a>
       </li>
-      <li class="dropdown"><a href="Restaurantes"style="text-decoration: none;"><span>Restaurantes</span> <i class="bi bi-chevron-down"></i></a>
+      <li class="dropdown"><a style="text-decoration: none; color: white; border-color: white; border-width: 1px; border-style: solid; padding-right:25px ;"><span>Restaurantes</span> <i class="bi bi-chevron-down"></i></a>
         <ul>
           <li><a href="KFC">KFC</a></li>
           <li><a href="Hong Fat">Hong Fat</a></li>
@@ -39,15 +40,15 @@
         </ul>
       </li>
       <li>
-        <a [routerLink]="['Contactanos']"style="text-decoration: none;">
-          <i class="bi bi-telephone-fill" style="font-size: 20px;"></i>
+        <a [routerLink]="['Contactanos']"style="text-decoration: none; color: white; border-color: white; border-width: 1px; border-style: solid; padding-right:25px ;">
+          <i class="bi bi-telephone-fill" style="font-size: 20px; padding-right: 5px;"></i>
           <br> <span>Contactanos</span>
         </a>
       </li>
-      <li><a class="getstarted scrollto"href="Registrate" style="text-decoration: none;"> Registrate</a>
+      <li><a class="getstarted scrollto"[routerLink]="['Registrate']" style="text-decoration: none;"> Registrate</a>
       </li>
       <li><a class="getstarted scrollto" style="color: black; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" [routerLink]="['Login']"style="text-decoration: none;">
-        <i class="bi bi-person-circle" style="font-size: 20px; width: 40px; color: black;"></i>Iniciar Sesion</a>
+        <i class="bi bi-person-circle" style="font-size: 25px; width: 40px; color: black;"></i>Iniciar Sesion</a>
       </li>
     </ul>
     <i class="bi bi-list mobile-nav-toggle"></i>
