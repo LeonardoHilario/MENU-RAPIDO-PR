@@ -23,6 +23,7 @@ import { RestaurantesComponent } from './content/restaurantes/restaurantes.compo
 import { NovedadesComponent } from './content/novedades/novedades.component';
 import { LoginComponent } from './login/login.component';
 import { ContactanosComponent } from './content/contactanos/contactanos.component';
+import {AngularFireAuth} from '@angular/fire/compat/auth';
 
 
 const appRoutes: Routes=[
@@ -61,7 +62,7 @@ const appRoutes: Routes=[
     AppRoutingModule,
     RouterModule.forRoot(appRoutes,{enableTracing:true}),
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [
     CargarscriptsService,

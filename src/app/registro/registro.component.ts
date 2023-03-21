@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-registro',
@@ -7,9 +8,58 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroComponent implements OnInit {
 
-  constructor() { }
+  form={
+    nombre:"",
+    correo:"",
+    contrasena:""
+  }
+  ccontrasena:any
+
+  constructor(private auth: AngularFireAuth) { }
 
   ngOnInit(): void {
   }
+  registrarme(){
+    if(this.form.nombre !=''&& this.form.correo !='' && this.form.contrasena !='' && this.ccontrasena !=''){
+      if(this.form.contrasena!=this.ccontrasena){
+        alert("Las contraseñas no coinciden")
+      }
+      else{
+        this.adduser(this.form).then((result)=>{
+          if(result){
+            alert("Registrado Correctamente")
+            this.ngOnInit
+          }
+          else{
+            alert("Error. Intente nuevamente")
+          }
+        })
+      }
 
+    }
+    else{
+      alert("Favor de completar los datos")
+    }
+  }
+  adduser(form:any){
+    var promise = new Promise((resolve, reject) => {
+      this.auth.createUserWithEmailAndPassword(form.correo,form.contrasena)
+      .then((result) => {
+        resolve(result)
+      })
+      .catch(function(error){
+        if(error.code == 'auth/invalid-email'){
+          alert("Ingresa un correo electronico valido")
+        }
+        if(error.code == 'auth/email-already-in-use'){
+          alert("Ese correo ya se encuentra registrado")
+        }
+        if(error.code == 'auth-weak-password'){
+          alert(error.code == 'La contraseña debe tener al menos 8 caracteres.')
+        }
+      })
+    })
+    return promise;
+  }
 }
+

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CargarscriptsService } from '../cargarscripts.service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -7,7 +9,7 @@ import { CargarscriptsService } from '../cargarscripts.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private cargarscripts: CargarscriptsService)
+  constructor(private cargarscripts: CargarscriptsService, private auth:AngularFireAuth, private router: Router)
   {cargarscripts.carga([
  "assets/vendor/purecounter/purecounter_vanilla.js",
  "assets/vendor/aos/aos.js",
@@ -20,6 +22,19 @@ export class NavbarComponent implements OnInit {
 }
 
   ngOnInit(): void {
+  }
+  cerrarsesion(){
+    this.auth.authState.subscribe(user=>{
+      if(user){
+        this.auth.signOut().then(()=>{
+          localStorage.removeItem('user');
+          alert("¡Sesion Finalizada!")
+          window.location.reload()
+        })
+      }
+      else
+      this.router.navigate(['inicio'])
+    })
   }
 
 }
