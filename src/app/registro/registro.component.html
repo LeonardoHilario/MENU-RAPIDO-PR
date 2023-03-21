@@ -1,24 +1,39 @@
-<form>
+<!--<form>
     <div>
         <label>Nombre</label>
             <br>
-            <input type="text" [(ngModel)]="form.nombre" placeholder="Escribe tu nombre.">
+            <input type="text" placeholder="Escribe tu nombre." name="nombre">
             <br><br>
         <label>Correo Electronico:</label>
             <br>
-            <input type="email" [(ngModel)]="form.correo" placeholder="Escribe tu correo.">
+            <input type="email" placeholder="Escribe tu correo." name="correo">
             <br><br>
         <label>Contraseña:</label>
             <br>
-            <input type="password" [(ngModel)]="form.contrasena" placeholder="Debe contener 8 caracteres.">
+            <input type="password" placeholder="Debe contener 8 caracteres." name="contrasena" >
             <br><br>
         <label>Repite tu contraseña:</label>
-            <input type="password" [(ngModel)]="ccontrasena" placeholder="Debe contener 8 caracteres.">
+            <input type="password" placeholder="Debe contener 8 caracteres." name="ccontrasena">
             <br><br>
-        <button (click)="registrarme()">Ingresar<i class="bi bi-box-arrow-in-right"></i></button>
+        <button  value="registrar"(click)="registrarme1()">Ingresar<i class="bi bi-box-arrow-in-right"></i></button>
+        <input type="button" name="" value="Registrar" (click)="registrarme1()">
             <br><br>
             <a [routerLink]="['../Sesion']">
                 ¿Ya tienes cuenta? ¡Inicia Sesion!
             </a>
     </div>
+</form>-->
+
+<form >
+    <label>Nombre</label>
+    <br>
+    <input type="text" [(ngModel)]="form.nombre" name="nombre">
+    <br><br>
+    <input type="text" [(ngModel)]="form.correo" name="correo">
+    <input type="password" [(ngModel)]="form.contrasena" name="contrasena">
+    <input type="password" [(ngModel)]="ccontrasena" name="ccontrasena">
+    <input type="button" name="" value="Registrar" (click)="registrarme()">
 </form>
+
+
+
