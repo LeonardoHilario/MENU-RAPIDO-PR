@@ -15,11 +15,10 @@
         <label>Repite tu contraseña:</label>
             <input type="password" [(ngModel)]="ccontrasena" placeholder="Debe contener 8 caracteres.">
             <br><br>
-        <button (click)="registrarme()"><i class="bi bi-box-arrow-in-right"></i></button>
+        <button (click)="registrarme()">Ingresar<i class="bi bi-box-arrow-in-right"></i></button>
             <br><br>
-            <a [routerLink]="['Sesion']">
+            <a [routerLink]="['../Sesion']">
                 ¿Ya tienes cuenta? ¡Inicia Sesion!
             </a>
-
     </div>
 </form>

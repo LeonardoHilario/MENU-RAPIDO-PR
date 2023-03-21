@@ -17,15 +17,19 @@ form={
   ngOnInit(): void {
     this.auth.authState.subscribe(user =>{
       if (user){
-        this.router.navigate([''])
+        this.router.navigate(['/inicio'])
       }
     })
   }
 iniciarsesion(){
   this.auth.signInWithEmailAndPassword(this.form.correo, this.form.contrasena).then((userCredential) => {
-    const user= userCredential.user;
+    const user = userCredential.user;
     console.log (user)
     alert("¡Bienvenido/a!")
   })
-}
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  });
+  }
 }

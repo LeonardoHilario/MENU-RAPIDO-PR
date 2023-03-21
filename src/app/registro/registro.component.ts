@@ -20,30 +20,30 @@ export class RegistroComponent implements OnInit {
   ngOnInit(): void {
   }
   registrarme(){
-    if(this.form.nombre !=''&& this.form.correo !='' && this.form.contrasena !='' && this.ccontrasena !=''){
+    if(this.form.nombre != '' && this.form.correo != '' && this.form.contrasena != '' && this.ccontrasena !=''){
       if(this.form.contrasena!=this.ccontrasena){
         alert("Las contraseñas no coinciden")
       }
       else{
         this.adduser(this.form).then((result)=>{
           if(result){
-            alert("Registrado Correctamente")
-            this.ngOnInit
+            alert("¡Registrado Correctamente!")
+            this.ngOnInit()
           }
           else{
             alert("Error. Intente nuevamente")
           }
         })
       }
-
     }
     else{
       alert("Favor de completar los datos")
     }
   }
-  adduser(form:any){
+
+  adduser(form: any){
     var promise = new Promise((resolve, reject) => {
-      this.auth.createUserWithEmailAndPassword(form.correo,form.contrasena)
+      this.auth.createUserWithEmailAndPassword(form.correo, form.contrasena)
       .then((result) => {
         resolve(result)
       })

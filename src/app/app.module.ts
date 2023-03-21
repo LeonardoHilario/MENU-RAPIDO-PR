@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +23,6 @@ import { RestaurantesComponent } from './content/restaurantes/restaurantes.compo
 import { NovedadesComponent } from './content/novedades/novedades.component';
 import { LoginComponent } from './login/login.component';
 import { ContactanosComponent } from './content/contactanos/contactanos.component';
-import {AngularFireAuth} from '@angular/fire/compat/auth';
 
 
 const appRoutes: Routes=[
@@ -62,7 +61,7 @@ const appRoutes: Routes=[
     AppRoutingModule,
     RouterModule.forRoot(appRoutes,{enableTracing:true}),
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [
     CargarscriptsService,
