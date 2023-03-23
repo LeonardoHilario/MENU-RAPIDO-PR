@@ -1,5 +1,4 @@
 <!--<form>
-    <div>
         <label>Nombre</label>
             <br>
             <input type="text" placeholder="Escribe tu nombre." name="nombre">
@@ -21,18 +20,30 @@
             <a [routerLink]="['../Sesion']">
                 ¿Ya tienes cuenta? ¡Inicia Sesion!
             </a>
-    </div>
 </form>-->
 
 <form >
     <label>Nombre</label>
     <br>
-    <input type="text" [(ngModel)]="form.nombre" name="nombre">
+    <input type="text" [(ngModel)]="form.nombre" name="nombre" placeholder="Escribe tu nombre">
     <br><br>
-    <input type="text" [(ngModel)]="form.correo" name="correo">
-    <input type="password" [(ngModel)]="form.contrasena" name="contrasena">
-    <input type="password" [(ngModel)]="ccontrasena" name="ccontrasena">
+    <label>Email</label>
+    <br>
+    <input type="text" [(ngModel)]="form.correo" name="correo" placeholder="Escribe tu correo">
+    <br><br>
+    <label>Contraseña</label>
+    <br>
+    <input type="password" [(ngModel)]="form.contrasena" name="contrasena" placeholder="Debe contener 8 caracteres">
+    <br><br>
+    <label>Repetir contraseña</label>
+    <br>
+    <input type="password" [(ngModel)]="ccontrasena" name="ccontrasena" placeholder="Debe contener 8 caracteres">
+    <br><br>
     <input type="button" name="" value="Registrar" (click)="registrarme()">
+    <br><br>
+            <a [routerLink]="['../Sesion']">
+                ¿Ya tienes cuenta? ¡Inicia Sesion!
+            </a>
 </form>
 
 
