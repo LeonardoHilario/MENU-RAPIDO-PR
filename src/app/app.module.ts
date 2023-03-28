@@ -23,6 +23,7 @@ import { RestaurantesComponent } from './content/restaurantes/restaurantes.compo
 import { NovedadesComponent } from './content/novedades/novedades.component';
 import { LoginComponent } from './login/login.component';
 import { ContactanosComponent } from './content/contactanos/contactanos.component';
+import { KFCComponent } from './content/restaurantes/kfc/kfc.component';
 
 
 const appRoutes: Routes=[
@@ -54,7 +55,8 @@ const appRoutes: Routes=[
     RestaurantesComponent,
     NovedadesComponent,
     LoginComponent,
-    ContactanosComponent
+    ContactanosComponent,
+    KFCComponent
   ],
   imports: [
     BrowserModule,
