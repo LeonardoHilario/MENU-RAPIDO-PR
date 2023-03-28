@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+  usuario_activo!: boolean;
+  
   constructor(private cargarscripts: CargarscriptsService, private auth:AngularFireAuth, private router: Router)
   {cargarscripts.carga([
  "assets/vendor/purecounter/purecounter_vanilla.js",
@@ -22,6 +23,14 @@ export class NavbarComponent implements OnInit {
 }
 
   ngOnInit(): void {
+this.auth.authState.subscribe(user =>{
+  if(user) {
+    this.usuario_activo = true
+  }
+  else{
+    this.usuario_activo = false
+  }
+})
   }
   cerrarsesion(){
     this.auth.authState.subscribe(user=>{
