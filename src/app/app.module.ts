@@ -30,7 +30,7 @@ import { DominosComponent } from './content/restaurantes/dominos/dominos.compone
 
 const appRoutes: Routes=[
   {path:'', component:InicioComponent},
-  {path: 'inicio', component: InicioComponent},
+  {path: 'Inicio', component: InicioComponent},
   {path: 'Promociones', component: PromocionesComponent},
   {path:'Canjea', component: CanjeaComponent},
   {path:'Restaurantes', component:RestaurantesComponent},
@@ -38,7 +38,10 @@ const appRoutes: Routes=[
   {path:'Login', component:LoginComponent},
   {path: 'Sesion', component:SesionComponent},
   {path:'Registro',component:RegistroComponent},
-  {path:'Contactanos', component:ContactanosComponent}
+  {path:'Contactanos', component:ContactanosComponent},
+  {path:'KFC', component:KFCComponent},
+  {path:'BurgerKing', component:BurgerkingComponent},
+  {path:'Dominos', component:DominosComponent}
 
 ];
 
